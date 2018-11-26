@@ -23,25 +23,27 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consists of multiple steps:
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
+Applying a color mask
+Performing edge detection
+Selecting regions to search for lane lines
+Using the Hough transform to find line segments
+Extrapolating the lane from the line segments provided by the Hough transform
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
-One potential shortcoming would be what would happen when ... 
+Highly sensitive to color
+Requires hard coded regions
+Highly dependent on lane location
 
 Another shortcoming could be ...
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+Use information from past frames
+Better tuned hough transform and edge detection
+Automatically calculate region
+Automatically calculate color mask range
